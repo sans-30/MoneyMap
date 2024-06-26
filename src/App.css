@@ -1,0 +1,238 @@
+
+/* Define CSS variables for light and dark themes */
+:root {
+  --theme-light-bg: #ffffff;
+  --theme-light-text: #000000;
+  --theme-light-primary: #007bff;
+  --theme-light-shadow: 0px 0px 30px 8px rgba(231, 231, 231, 0.75);
+
+  --theme-dark-bg: #403e3e;
+  --theme-dark-text: #aaa6a6;
+  --theme-dark-primary: #007bff;
+  --theme-dark-shadow: 0px 0px 10px 5px rgba(6, 6, 6, 0.5);
+
+  /* Default theme */
+  --theme-bg: var(--theme-light-bg);
+  --theme-text: var(--theme-light-text);
+  --theme-primary: var(--theme-light-primary);
+  --theme-shadow: var(--theme-light-shadow);
+}
+
+[data-theme="dark"] {
+  --theme-bg: var(--theme-dark-bg);
+  --theme-text: var(--theme-dark-text);
+  --theme-primary: var(--theme-dark-primary);
+  --theme-shadow: var(--theme-dark-shadow);
+}
+
+body {
+  background-color: var(--theme-bg);
+  color: var(--theme-text);
+}
+
+/* Your existing styles */
+.blue-text {
+  color: var(--theme-primary);
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 90vh;
+}
+
+.signup-signin-container {
+  width: 30vw;
+  min-width: 400px;
+  box-shadow: var(--theme-shadow);
+  border-radius: 1rem;
+  padding: 2rem;
+  background-color: var(--theme-bg);
+  color: var(--theme-text);
+}
+
+.input-wrapper {
+  margin: 1rem 0rem;
+  width: 100%;
+}
+
+.input-wrapper p {
+  margin-bottom: 0px;
+  color: var(--theme-text);
+}
+
+.input-wrapper input,
+.custom-input {
+  border: 0px;
+  border-bottom: 1px solid var(--theme-text);
+  padding: 0.5rem 0rem;
+  width: 100%;
+  border-radius: 0;
+  background-color: var(--theme-bg);
+  color: var(--theme-text);
+}
+
+.custom-input {
+  margin-top: -1rem !important;
+}
+
+.input-wrapper input::placeholder,
+.custom-input::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.input-wrapper input:focus,
+.custom-input:focus {
+  outline: none;
+  opacity: 1;
+  transition: all 0.3s;
+}
+
+.btn {
+  color: var(--theme-primary);
+  text-align: center;
+  width: 100%;
+  margin: 0.5rem 0rem;
+  padding: 0.5rem !important;
+  background-color: var(--theme-bg);
+  border: 1px solid var(--theme-primary);
+  border-radius: 0.25rem;
+  cursor: pointer;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  height: auto !important;
+}
+
+.btn delete {
+  color: var(--theme-primary);
+  text-align: center;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--theme-primary);
+  color: var(--theme-bg);
+  transition: all 0.3s;
+}
+
+.btn-blue {
+  background-color: var(--theme-primary);
+  color: var(--theme-bg);
+}
+
+.btn-blue:hover {
+  background-color: var(--theme-bg) !important;
+  color: var(--theme-primary) !important;
+  transition: all 0.3s;
+}
+
+.input-flex {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  box-shadow: var(--theme-shadow);
+  border-radius: 0.5rem;
+  padding: 0rem 0.5rem;
+  background-color: var(--theme-bg);
+  color: var(--theme-text);
+}
+
+.input-flex input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 0;
+  background-color: var(--theme-bg);
+  color: var(--theme-text);
+}
+
+.input-flex input:focus {
+  outline: none;
+}
+
+.select-input {
+  width: 30%;
+  margin-right: 10;
+  display: flex;
+  align-items: center;
+  box-shadow: var(--theme-shadow);
+  border-radius: 0.5rem !important;
+  padding: 0.2rem 0.5rem;
+  background-color: var(--theme-bg);
+  color: var(--theme-text);
+}
+
+.select-input-2 > div {
+  border-width: 0px !important;
+  border-bottom-width: 1px !important;
+  border-radius: 0 !important;
+  border-color: var(--theme-text) !important;
+}
+
+.select-input > div {
+  border: 0px solid var(--theme-bg) !important;
+}
+
+.my-table {
+  box-shadow: var(--theme-shadow);
+  border-radius: 0.5rem !important;
+  padding: 2rem;
+  margin-bottom: 4rem;
+  background-color: var(--theme-bg);
+  color: var(--theme-text);
+}
+
+.dashboard-container {
+  padding-bottom: 1rem;
+  background-color: var(--theme-bg);
+  color: var(--theme-text);
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 2rem;
+}
+
+/* Styles for individual cards */
+.card {
+  flex: 1 1 30%;
+  padding: 1rem;
+  border: 1px solid var(--theme-text);
+  border-radius: 8px;
+  box-shadow: var(--theme-shadow);
+  background-color: var(--theme-bg);
+  margin: 0.5rem;
+  color: var(--theme-text);
+}
+
+.card h2 {
+  margin-bottom: 1rem;
+}
+
+.card p {
+  margin: 0.5rem 0;
+}
+
+.btn-toggle{
+  color: var(--theme-primary);
+  text-align: center;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  margin: 0.5rem 0rem;
+  padding: 0.5rem !important;
+  background-color: var(--theme-bg);
+  border: 1px solid var(--theme-primary);
+  border-radius: 0.25rem;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  height: auto !important;
+}
